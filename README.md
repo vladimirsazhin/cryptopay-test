@@ -70,7 +70,7 @@ Transfer-Encoding: chunked
 Email не указан:
 
 ```
-$ curl -i -X POST http://localhost:9292/users
+$ curl -i -X POST -d '' http://localhost:9292/users
 HTTP/1.1 422 Unprocessable Entity
 Content-Type: application/json
 Transfer-Encoding: chunked
