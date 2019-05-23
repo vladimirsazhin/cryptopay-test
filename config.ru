@@ -60,7 +60,7 @@ class App
   def create_and_render_user(params)
     render(201, data: User.create(params))
   rescue Sequel::ValidationFailed => error
-    render_errors(400, *error.errors.values.flatten)
+    render_errors(422, *error.errors.values.flatten)
   rescue Sequel::MassAssignmentRestriction
     render_errors(400, :bad_request)
   end

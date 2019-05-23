@@ -37,7 +37,7 @@ Content-Length: 98
 
 ```
 $ curl -i -X POST -d '{"email": "john@example.com"}' http://localhost:9292/users
-HTTP/1.1 400 Bad Request
+HTTP/1.1 422 Unprocessable Entity
 Content-Type: application/json
 Transfer-Encoding: chunked
 
@@ -54,7 +54,7 @@ Transfer-Encoding: chunked
 
 ```
 $ curl -i -X POST -d '{"email": "john"}' http://localhost:9292/users
-HTTP/1.1 400 Bad Request
+HTTP/1.1 422 Unprocessable Entity
 Content-Type: application/json
 Transfer-Encoding: chunked
 
@@ -71,7 +71,7 @@ Email не указан:
 
 ```
 $ curl -i -X POST http://localhost:9292/users
-HTTP/1.1 400 Bad Request
+HTTP/1.1 422 Unprocessable Entity
 Content-Type: application/json
 Transfer-Encoding: chunked
 
